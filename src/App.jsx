@@ -1,5 +1,5 @@
 import "./App.css";
-import Login from "./auth/Login";
+
 import SignUp from "./auth/SignUp";
 import { Routes, Route } from "react-router-dom";
 import Home from "./page/Home";
@@ -14,6 +14,7 @@ import AdminLogin from "./admin/Admin-login";
 import AddItem from "./admin/AddItem";
 import AdminLayout from "./components/admin-components/AdminLayout";
 import ProductList from "./admin/ProductList";
+import Login from "./auth/Login";
 
 function App() {
   return (
