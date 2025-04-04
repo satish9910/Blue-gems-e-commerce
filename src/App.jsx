@@ -3,13 +3,17 @@ import Login from "./auth/Login";
 import SignUp from "./auth/SignUp";
 import { Routes, Route } from "react-router-dom";
 import Home from "./page/Home";
-import PrivateRoute from "./components/PrivateRoutes";
+// import PrivateRoute from "./components/PrivateRoutes";
 import Layout from "./components/Layout"; // Import the Layout component
 import ContactPage from "./page/ContactPage";
 import About from "./page/About";
 import CollectionPage from "./page/CollectionPage";
 import ProductDetail from "./page/ProductDetail";
 import CartPage from "./page/CartPage";
+import AdminLogin from "./admin/Admin-login";
+import AddItem from "./admin/AddItem";
+import AdminLayout from "./components/admin-components/AdminLayout";
+import ProductList from "./admin/ProductList";
 
 function App() {
   return (
@@ -22,66 +26,67 @@ function App() {
       <Route
         path="/"
         element={
-          <PrivateRoute>
-            <Layout>
-              <Home />
-              
-            </Layout>
-          </PrivateRoute>
+          <Layout>
+            <Home />
+          </Layout>
         }
       />
       <Route
         path="/contact"
         element={
-          <PrivateRoute>
-            <Layout>
-              <ContactPage />
-              
-            </Layout>
-          </PrivateRoute>
+          <Layout>
+            <ContactPage />
+          </Layout>
         }
       />
       <Route
         path="/about"
         element={
-          <PrivateRoute>
-            <Layout>
-              <About /> 
-            </Layout>
-          </PrivateRoute>
+          <Layout>
+            <About />
+          </Layout>
         }
       />
       <Route
         path="/collection"
         element={
-          <PrivateRoute>
-            <Layout>
-              <CollectionPage /> 
-            </Layout>
-          </PrivateRoute>
+          <Layout>
+            <CollectionPage />
+          </Layout>
         }
       />
       <Route
         path="/detail"
         element={
-          <PrivateRoute>
-            <Layout>
-              <ProductDetail /> 
-            </Layout>
-          </PrivateRoute>
+          <Layout>
+            <ProductDetail />
+          </Layout>
         }
       />
       <Route
         path="/cart"
         element={
-          <PrivateRoute>
-            <Layout>
-              <CartPage /> 
-            </Layout>
-          </PrivateRoute>
+          <Layout>
+            <CartPage />
+          </Layout>
         }
       />
+
+      {/* Admin Routes */}
+
+     <Route path="/admin/login" element={<AdminLogin />} />
+     <Route path="/admin/dashboard" element={
+      <AdminLayout>
+      <AddItem />
+      </AdminLayout>
+      } />
+     <Route path="/admin/product-list" element={
+      <AdminLayout>
+      <ProductList/>
+      </AdminLayout>
+      } />
     </Routes>
+
   );
 }
 

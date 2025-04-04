@@ -40,7 +40,6 @@ const Login = () => {
         // Dispatch login success to Redux store
         dispatch(loginSuccess({ token }));
 
-        // Redirect to dashboard
         navigate("/");
       } else {
         alert("Login failed! Please try again.");
@@ -114,7 +113,7 @@ const Login = () => {
             </div>
           </form>
           <div className="mt-12 text-sm text-gray-700 text-center">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <a
               href="#"
               className="cursor-pointer text-indigo-600 hover:text-indigo-800"
