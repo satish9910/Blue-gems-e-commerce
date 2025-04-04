@@ -14,7 +14,7 @@ import AdminLogin from "./admin/Admin-login";
 import AddItem from "./admin/AddItem";
 import AdminLayout from "./components/admin-components/AdminLayout";
 import ProductList from "./admin/ProductList";
-import Login from "./auth/Login";
+import Login from "./auth/login";
 
 function App() {
   return (
